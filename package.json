@@ -1,0 +1,33 @@
+{
+  "name": "city-clipper",
+  "version": "1.0.13",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jsonfile": "^2.3.1",
+    "minimist": "^1.2.0",
+    "turf-featurecollection": "^1.0.1",
+    "turf-inside": "^3.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "rollup-plugin-babel": "^2.4.0",
+    "rollup-plugin-json": "^2.0.0",
+    "rollup-plugin-uglify": "^0.3.1"
+  },
+  "scripts": {
+    "test": "mocha tests/.setup.js tests/**/*.test.js --compilers js:babel-core/register",
+    "build": "babel -d dist src"
+  },
+  "bin": {
+  "city-clipper": "dist/index.js"
+  },
+  "author": "Kushan Joshi <0o3ko0@gmail.com> (http://kushanjoshi.com)",
+  "license": "ISC"
+}

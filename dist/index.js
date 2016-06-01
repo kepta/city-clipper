@@ -23,7 +23,9 @@ var args = _interopRequireDefault(_minimist).default;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var argv = args(process.argv.slice(2));
-if (argv.h || argv.city || argv.source) {
+if (argv.h || argv.help) {
+  console.log('Usage: city-clipper --source <source.json> --city <city.json>');
+} else if (argv.city || argv.source) {
   var city = readFileSync(argv.city);
   var source = readFileSync(argv.source);
 

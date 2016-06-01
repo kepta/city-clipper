@@ -2,9 +2,9 @@
 
 import inside from 'turf-inside';
 import featureC from 'turf-featurecollection';
-
 import { writeFileSync, readFileSync } from 'jsonfile';
 import args from 'minimist';
+
 var argv = args(process.argv.slice(2));
 if (argv.h || argv.help) {
   console.log('Usage: city-clipper --source <source.json> --city <city.json>');
